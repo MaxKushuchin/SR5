@@ -1,4 +1,4 @@
-def conv(shislo, system):
+def conv(chislo, system):
     result = ''
     while chislo > 0:
         result = str(chislo % system) + result
