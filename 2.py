@@ -1,16 +1,15 @@
-def conv(n, m):
-    b = ''
-    while n > 0:
-        b = str(n % m) + b
-        n //= m
-    return b
+def conv(chislo, system):
+    result = ''
+    while chislo > 0:
+        result = str(chislo % system) + result
+        chislo //= system
+    return result
 
 
-
-n = int(input('Введите число: '))
-m = int(input('Введите целевую систему счисления: '))
-if m == 2 or m == 8:
-    result = conv(n, m)
+chislo = int(input('Введите число: '))
+system = int(input('Введите целевую систему счисления: '))
+if system == 2 or system == 8:
+    result = conv(chislo, system)
     if len(result) != 8:
         result = '0' * (8-len(result)) + result
-        print(n, '->' , result)
+print(chislo, '->' , result)
